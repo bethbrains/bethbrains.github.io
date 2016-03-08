@@ -14,6 +14,7 @@ baseurl:          /
 
 gems:
    - lazy-tweet-embedding
+   - tweet-tag
 
 author:
   name:           'Beth Breisnes'
