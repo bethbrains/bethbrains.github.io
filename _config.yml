@@ -8,7 +8,9 @@ permalink:        pretty
 # Setup
 title:            bethbrains
 tagline:          'Salesforce MVP and General Nerd'
-description:      'Salesforce MVP and General Nerd. No, my last name isn''t actually Brains.'
+description:      |
+Salesforce MVP and General Nerd. 
+No, my last name isn''t actually Brains.
 url:              http://bethbrains.github.io
 baseurl:          /
 
