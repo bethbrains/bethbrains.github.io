@@ -9,7 +9,7 @@ relative_permalinks: true
 # Setup
 title:            bethbrains
 tagline:          'Salesforce MVP and General Nerd'
-description:      'No, my last name isn't actually Brains.'
+description:      'No, my last name isn''t actually Brains.'
 url:              http://bethbrains.github.io
 baseurl:          /
 
