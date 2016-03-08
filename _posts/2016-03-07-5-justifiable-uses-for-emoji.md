@@ -12,4 +12,4 @@ If you have a "Next Birthday" field that's automatically calculated,
 
 Hat tip to Jodie Miners for this one:
 
-https://twitter.com/jodiem/status/705256525128830977
+{% tweet https://twitter.com/jodiem/status/705256525128830977 %}
