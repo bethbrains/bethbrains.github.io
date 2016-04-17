@@ -27,4 +27,4 @@ So now each Session has a hidden field with the day of week abbreviation on it. 
 
 Enter [Declarative Lookup Rollup Summaries](https://github.com/afawcett/declarative-lookup-rollup-summaries), one of my favorite apps. It not only lets you create rollups across lookup relationships (_or_ master-details, it doesn't actually care), but it also has more powerful filtering (relative date filters, anyone?) and functions. One of those is the ability to concatenate text strings, and even concatenate only _unique_ text strings. Do you see it yet?
 
-All I have to do is set up a rollup that concatenates only the _unique_ values of the `Day_of_Week__c` field from the `Session__c` record up on to the `Course__c` object, into a new field called `Days_of_Week__c`, and set the 
+All I have to do is set up a rollup that concatenates only the _unique_ values of the `Day_of_Week__c` field from the `Session__c` record up on to the `Course__c` object, into a new field called `Days_of_Week__c`, and set the concatenation delimiter (the thing that goes between my unique values) to `/`.
