@@ -4,22 +4,25 @@ published: false
 ## 8 Days a Week: Rolling up Unique Days of the Week onto a Parent Record
 
 **Use Case**
+
 A master object (think "Course") has a detail object (think "Session"). The detail object is primarily defined by a date field, so in this case, the date of the Session. What if you want to represent the days of the week that the Sessions occur on in a field on the Course record? So if the Session records fell on Mondays and Wednesdays, you would want something like "M, W", "Mon/Wed", or "Mondays, Wednesdays". And if you added a Thursday session, the field would need to concatenate that too, now reading "M, W, Th", "Mon/Wed/Thur", or "Mondays, Wednesdays, Thursdays". And what if you wanted to _entirely automate this field_ to preserve data integrity?
 
 Well, if you're me, you stew on the concept for a few days pondering how to attack it with code, and then you wake up like a shot at 6AM one morning with a really simple declarative solution. Huzzah!
 
 It all starts with a formula field. In this case, I'm just looking for a "M/T/W/Th/F/Sa/Su" style. So in a hidden formula field on the Session record called `Day_of_Week__c`, we'll figure out which day of the week that Session is. 
 
-	CASE( 
-	MOD( Date__c - DATE( 1900, 1, 7 ), 7 ), 
-	0, "Su", 
-	1, "M", 
-	2, "T", 
-	3, "W", 
-	4, "Th", 
-	5, "F", 
-	"Sa" 
-	)
+```
+CASE(
+MOD( Date__c - DATE( 1900, 1, 7 ), 7 ), 
+0, "Su", 
+1, "M", 
+2, "T", 
+3, "W", 
+4, "Th", 
+5, "F", 
+"Sa" 
+)
+```
 
 This is a really common pattern for finding the day of week of a date. We take the date (`Date__c`), subtract a known Sunday (`DATE( 1900, 1, 7 )`) to get the total number of days between the two dates, divide by 7 (a week), and check the remainder (that's the `MOD()` function!) with a `CASE()` function. If the remainder is 0, `Date__c` is a Sunday. If the remainder is 1, it's a Monday. And so on. (By the time we get to Saturday, we're at our `else` condition in the `CASE()` function, so that's why we don't explicitly check for a remainder of 6.)
 
