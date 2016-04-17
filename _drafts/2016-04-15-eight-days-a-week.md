@@ -8,7 +8,7 @@ A master object (think "Course") has a detail object (think "Session"). The deta
 
 Well, if you're me, you stew on the concept for a few days pondering how to attack it with code, and then you wake up like a shot at 6AM one morning with a really simple declarative solution. Huzzah!
 
-It all starts with a formula field. In this case, I'm just looking for a "M/T/W/Th/F/Sa/Su" style. So in a hidden formula field on the Session record called `Day_of_Week__c`, we'll figure out which day of the week it is. 
+It all starts with a formula field. In this case, I'm just looking for a "M/T/W/Th/F/Sa/Su" style. So in a hidden formula field on the Session record called `Day_of_Week__c`, we'll figure out which day of the week that Session is. 
 
 	CASE( 
 	MOD( Date__c - DATE( 1900, 1, 7 ), 7 ), 
@@ -25,5 +25,6 @@ This is a really common pattern for finding the day of week of a date. We take t
 
 So now each Session has a hidden field with the day of week abbreviation on it. That's handy, but they're still not on the Course record.
 
-Enter Declarative Lookup Rollup Summaries, one of my favorite apps. 
+Enter [Declarative Lookup Rollup Summaries](https://github.com/afawcett/declarative-lookup-rollup-summaries), one of my favorite apps. It not only lets you create rollups across lookup relationships (_or_ master-details, it doesn't actually care), but it also has more powerful filtering (relative date filters, anyone?) and functions. One of those is the ability to concatenate text strings, and even concatenate only _unique_ text strings. Do you see it yet?
 
+All I have to do is set up a rollup that concatenates only the _unique_ values of the `Day_of_Week__c` field from the `Session__c` record up on to the `Course__c` object, into a new field called `Days_of_Week__c`, and set the 
