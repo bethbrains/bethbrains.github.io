@@ -26,9 +26,9 @@ MOD( Date__c - DATE( 1900, 1, 7 ), 7 ),
 
 This is a really common pattern for finding the day of week of a date. We take the date (`Date__c`), subtract a known Sunday (`DATE( 1900, 1, 7 )`) to get the total number of days between the two dates, divide by 7 (a week), and check the remainder (that's the `MOD()` function!) with a `CASE()` function. If the remainder is 0, `Date__c` is a Sunday. If the remainder is 1, it's a Monday. And so on. (By the time we get to Saturday, we're at our `else` condition in the `CASE()` function, so that's why we don't explicitly check for a remainder of 6.)
 
-So now each Session has a hidden field with the day of week abbreviation on it. That's handy, but they're still not on the Course record.
+So now each Session has a hidden field with the day of week abbreviation on it. That's handy, but they're still not on the Course record...
 
-Enter [Declarative Lookup Rollup Summaries](https://github.com/afawcett/declarative-lookup-rollup-summaries), one of my favorite apps. It not only lets you create rollups across lookup relationships (_or_ master-details, it doesn't actually care), but it also has more powerful filtering (relative date filters, anyone?) and functions. One of those is the ability to concatenate text strings, and even concatenate only _unique_ text strings. Do you see it yet?
+Enter [Declarative Lookup Rollup Summaries](https://github.com/afawcett/declarative-lookup-rollup-summaries), one of my favorite apps! It not only lets you create rollups across lookup relationships (_or_ master-details, it's a honey badger like that), but it also has more powerful filtering (relative date filters, anyone?) and functions. One of those is the ability to concatenate text strings, and even concatenate only _unique_ text strings. Do you see it yet?
 
 All I have to do is set up a rollup that concatenates only the _unique_ values of the `Day_of_Week__c` field from the `Session__c` record up on to the `Course__c` object, into a new field called `Days_of_Week__c`, and set the concatenation delimiter (the thing that goes between my unique values) to `/`! 
 
