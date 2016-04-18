@@ -34,7 +34,7 @@ All I have to do is set up a rollup that concatenates only the _unique_ values o
 
 Voila! We just turned this...
 
-![Sessions Related List]({{site.baseurl}}/_posts/SessionsRelatedList.jpg)
+![Sessions Related List]({{ site_url }}/_posts/SessionsRelatedList.jpg)
 
 ...into this!
 
