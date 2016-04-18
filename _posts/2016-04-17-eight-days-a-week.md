@@ -34,10 +34,10 @@ All I have to do is set up a rollup that concatenates only the _unique_ values o
 
 Voila! We just turned this...
 
-![Sessions Related List]({{site.baseurl}}/_posts/SessionsRelatedList.jpg)
+![Sessions Related List](https://www.dropbox.com/s/75uvpv5zm4ya2t2/SessionsRelatedList.jpg?dl=0)
 
 ...into this!
 
-![Concatenated Field]({{site.baseurl}}/_posts/ConcatenatedField.png)
+![Concatenated Field](https://www.dropbox.com/s/ivppfl72t7f4pjn/ConcatenatedField.png?dl=0)
 
 What other use cases can you think of for the **contcatenate unique** function in DLRS?
