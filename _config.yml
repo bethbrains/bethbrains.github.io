@@ -10,7 +10,7 @@ title:            bethbrains
 tagline:          'Salesforce MVP and General Nerd'
 description:      'Salesforce MVP and General Nerd'
 url:              http://bethbrains.github.io
-baseurl:          bethbrains.github.io
+baseurl:          /bethbrains.github.io
 
 gems:
    - lazy-tweet-embedding
