@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 ## 8 Days a Week: Rolling up Unique Days of the Week onto a Parent Record
 
