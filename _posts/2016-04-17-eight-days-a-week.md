@@ -38,6 +38,6 @@ Voila! We just turned this...
 
 ...into this!
 
-![Concatenated Field]({{site.baseurl}}_posts/Concatenated FIeld.png)
+![Concatenated Field]({{site.baseurl}}_posts/Concatenated%20FIeld.png)
 
 What other use cases can you think of for the **contcatenate unique** function in DLRS?
