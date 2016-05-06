@@ -40,4 +40,4 @@ Voila! We just turned this...
 
 ![Concatenated Field](https://dl.dropboxusercontent.com/s/ivppfl72t7f4pjn/ConcatenatedField.png)
 
-What other use cases can you think of for the **contcatenate unique** function in DLRS?
+What other use cases can you think of for the **concatenate unique** function in DLRS? Tell me [on Twitter](http://www.twitter.com/bethbrains)!
